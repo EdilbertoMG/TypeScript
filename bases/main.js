@@ -1,21 +1,14 @@
 "use strict";
-(() => {
-    let flash = {
-        name: 'Barry Allen',
-        age: 24,
-        powers: ['Súper velocidad', 'Viajar en el tiempo'],
-        getName() {
-            return this.name;
-        }
+var Validations;
+(function (Validations) {
+    Validations.validtaeText = (text) => {
+        return (text.length > 3) ? true : false;
     };
-    let superman = {
-        name: 'Clark Kent',
-        age: 60,
-        powers: ['Súper fuerza'],
-        getName() {
-            return this.name;
-        }
+    Validations.validateDate = (myDate) => {
+        return (isNaN(myDate.valueOf()))
+            ? false
+            : true;
     };
-    console.log(superman.getName());
-})();
+})(Validations || (Validations = {}));
+console.log(Validations.validtaeText('Skrow'));
 //# sourceMappingURL=main.js.map

@@ -7,13 +7,13 @@
     }
 
     interface Human{
-        age: number
+        age: number;
     }
 
     class Mutant implements Xmen, Human{
-        public age: number;
-        public name: string;
-        public realName: string;
+        public age: number = 0;
+        public name: string = '';
+        public realName: string = '';
 
         mutantPower( id: number ){
             return `${this.name} ${this.realName}`;
